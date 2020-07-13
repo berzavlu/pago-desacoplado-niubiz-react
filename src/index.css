@@ -11,3 +11,265 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.w3-modal {
+  z-index: 9999;
+  display: none;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.w3-modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 10%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.show-modal-beneficiaries {
+  display: block;
+}
+.hide-modal-beneficiaries {
+  display: none;
+}
+
+.w3-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #0099CC;
+  height: 10px;
+}
+.w3title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0099CC;
+  text-align: center;
+}
+.w3-container, .w3-panel {
+  padding: 0.01em 16px;
+}
+.grupo-de-form {
+  display: flex;
+  margin-right: 2%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.grupo-de-form div label {
+  display: block;
+  padding-bottom: 7px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #8B8D8E;
+}
+.grupo-de-form div {
+  display: block;
+  width: 31%;
+  margin-right: 3%;
+}
+.grupo-de-form div input {
+  width: 100%;
+}
+.grupo-de-form div select {
+  width: 100%;
+}
+.top-18 {
+  margin-top: 18px;
+}
+
+.area-50 {
+  width: 100% !important;
+}
+
+.w3areabtn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.btn-pago-accion {
+  background: #00AF3F;
+  border-radius: 24px;
+  color: white;
+  border: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+}
+
+.btn-cancelar {
+  background: white;
+  border: 1px solid #0099CC;
+  box-sizing: border-box;
+  border-radius: 14px;
+  display: block;
+  padding: 6px 11px 6px 11px;
+  cursor: pointer;
+  color: #0099CC;
+}
+.btn-cancelar img {
+  height: 16px;
+}
+.btn-cancelar span {
+  padding-left: 8px;
+  color: #0099CC;
+}
+.btn-cancelar span {
+  font-size: 12px;
+}
+
+.w3-margen {
+  margin-left: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contentWidth {
+  max-width: 380px;
+  width: 100%;
+  background: #F4F3F1;
+}
+.headLogo {
+  margin-top: 30px;
+  text-align: center;
+}
+.headLogo img {
+  width: 176px;
+}
+.formPayment {
+  width: 100%;
+  max-width: 280px;
+  margin: 25px auto;
+}
+.formPayment__row {
+  margin-bottom: 20px;
+  display: flex;
+  position: relative;
+}
+.bordered-input {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+.formPayment__row input {
+  width: 100%;
+  padding-left: 40px;
+  height: 34px;
+}
+.formPayment__row input:hover,
+.formPayment__row input:focus {
+  outline: none;
+}
+.formPayment--btn {
+  width: 100%;
+  background: #00AF3F;
+  border-radius: 5px;
+  color: white;
+  border: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+}
+.formPayment--niubiz {
+  width: 120px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.formPayment--niubiz img {
+  width: 100%;
+}
+.formPayment__row--icon {
+  width: 38px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  background-size: 30px;
+}
+.formPayment__row--type {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  right: 10px;
+  width: 38px;
+  margin-top: 5px;
+}
+.formPayment__col--left {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+}
+.formPayment__col--right {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.btn-pago-cancel {
+  background: none;
+  border: 1px solid #0099CC;
+  color: #0099CC;
+  height: 30px;
+  padding: 0px;
+  width: 120px;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+#txtNumeroTarjeta {
+  width: 100%;
+  overflow: hidden;
+}
+
+#txtFechaVencimiento {
+  width: 100%;
+  overflow: hidden;
+}
+
+#txtCvv {
+  width: 100%;
+  overflow: hidden;
+}
