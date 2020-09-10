@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getTokenVisa, getTokenSessionVisa, sendTransaction } from './services'
+import { getTokenVisa, getTokenSessionVisa, sendTransaction, sendTransactionRecurrent } from './services'
 import logoNiubiz from './niubiz.png'
 import './App.css'
 
@@ -201,6 +201,35 @@ function App() {
         setShowForm(false)
     }
 
+    const onPayRecurrency = async () => {
+      const json = {
+        "antifraud":null,
+        "captureType":"manual",
+        "channel":"recurrent",
+        "countable": true,
+        "order":{
+          "amount": 100,
+          "currency": "PEN",
+          "purchaseNumber": PUCHASE_NUMBER,
+        },
+        "card":{
+          "tokenId": 7000010038732941,
+        },
+        "cardHolder":{
+          "email": "berzavlu@gmail.com",
+        },
+      }
+      try {
+        const restoken = await await getTokenVisa()
+        console.log(restoken.res)
+        const res = await sendTransactionRecurrent(MERCHANT_ID, restoken.res, json)
+        console.log(res)
+      } catch (error) {
+        alert('error')
+        console.log('Ocurrió un error al realizar la transacción', error)
+      }
+    }
+
     // 4919 – 1481 – 0785 – 9067
     return (<div className="App">
         <p>
@@ -215,8 +244,14 @@ function App() {
         </p>
         <button onClick={getTokenNiubizSesion}>Obtener Token de sesión</button>
         {
-        session !== '' && <div> {session}</div>
-    }
+          session !== '' && <div> {session}</div>
+        }
+        <hr />
+        <p>
+            <strong>Pago recurrente</strong>
+        </p>
+        <button onClick={onPayRecurrency}>cobrar recurrencia</button>
+
         {successPayment && (
           <h1>
               <strong>Pago correcto :)</strong>

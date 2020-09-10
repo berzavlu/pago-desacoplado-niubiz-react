@@ -110,3 +110,35 @@ export const sendTransaction = async (idMercado, token, json) => {
 
   return salidaJson
 }
+
+export const sendTransactionRecurrent = async (idMercado, token, json) => {
+  let salidaJson = {
+    error: false,
+    mensajeError: null,
+    res: {}
+  }
+
+  try {
+    const response = await fetch(URL_TRANSACTION_VISA + idMercado, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: token
+      },
+      body: JSON.stringify(json)
+    })
+
+    if (response.ok) {
+      const res = await response.json()
+      salidaJson.error = false
+      salidaJson.res = res
+    } else {
+      salidaJson.error = true
+      salidaJson.res = response
+    }
+  } catch (error) {
+    console.error(error)
+  }
+
+  return salidaJson
+}
